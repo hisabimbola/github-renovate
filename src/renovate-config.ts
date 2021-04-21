@@ -3,7 +3,7 @@ import { JsonObject } from './json';
 const branchName = 'github-renovate';
 
 const config: JsonObject = {
-  dryRun: true,
+  dryRun: false,
   extends: ['github>hisabimbola/renovate-base:base'],
   branchPrefix: `${branchName}/`,
   dependencyDashboardTitle: 'Dependency Dashboard self-hosted',
