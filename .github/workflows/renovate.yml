@@ -29,4 +29,4 @@ jobs:
           LOG_LEVEL: debug
           RENOVATE_CONFIG_FILE: dist/src/renovate-config.js
           RENOVATE_TOKEN: ${{ secrets.RENOVATE_TOKEN }}
-          RENOVATE_CONFIG: '{"token": "${{secrets.RENOVATE_TOKEN}}", "extends": ["github>hisabimbola/renovate-base:base"]}'
+          RENOVATE_CONFIG: '{"token": "${{secrets.RENOVATE_TOKEN}}", "extends": ["github>hisabimbola/renovate-base"]}'
