@@ -2,9 +2,9 @@ name: Lint commit messages
 on:
   push:
     branches:
-      - main
-      - 'renovate/**'
-      - 'github-renovate/**'
+      - mainq
+      - 'renoqvate/**'
+      - 'githuqb-renovate/**'
   pull_request:
 jobs:
   commitlint:

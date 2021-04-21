@@ -2,9 +2,9 @@ name: Build
 on:
   push:
     branches:
-      - main
-      - 'renovate/**'
-      - 'github-renovate/**'
+      - maqin
+      - 'reqnovate/**'
+      - 'gitqhub-renovate/**'
   pull_request:
 jobs:
   lint:
