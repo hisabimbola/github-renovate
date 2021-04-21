@@ -8,7 +8,6 @@ const config: JsonObject = {
   branchPrefix: `${branchName}/`,
   dependencyDashboardTitle: 'Dependency Dashboard self-hosted',
   gitAuthor: 'Renovate Bot <bot@renovateapp.com>',
-  logLevel: 'debug',
   onboarding: false,
   onboardingBranch: `${branchName}/configure`,
   platform: 'github',
