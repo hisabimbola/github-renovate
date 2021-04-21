@@ -7,8 +7,7 @@ on:
 # The "*" (#42, asterisk) character has special semantics in YAML, so this
 # string has to be quoted.
 #    - cron: '0/30 * * * *'
-env:
-  LOG_LEVEL: debug
+
 jobs:
   renovate:
     runs-on: ubuntu-latest
@@ -25,7 +24,7 @@ jobs:
       - name: Build
         run: npm run build
       - name: Renovate
-        uses: renovatebot/github-action@v24.119.4
-        with:
-          configurationFile: dist/src/renovate-config.js
-          token: ${{ secrets.RENOVATE_TOKEN }}
+        uses: docker://renovate/renovate:24.119.4
+        env:
+          LOG_LEVEL: debug
+          RENOVATE_CONFIG_FILE: dist/src/renovate-config.js
