@@ -11,7 +11,7 @@ const config: JsonObject = {
   onboarding: false,
   onboardingBranch: `${branchName}/configure`,
   platform: 'github',
-  repositories: [],
+  repositories: ['hisabimbola/github-renovate'],
 };
 
 /**
