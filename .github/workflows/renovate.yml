@@ -24,7 +24,7 @@ jobs:
       - name: Build
         run: npm run build
       - name: Renovate
-        uses: docker://renovate/renovate:24.119.4
+        uses: docker://renovate/renovate:25
         env:
           LOG_LEVEL: debug
           RENOVATE_CONFIG_FILE: dist/src/renovate-config.js
