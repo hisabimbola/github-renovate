@@ -26,7 +26,7 @@ jobs:
       - name: debug
         run: cat /etc/group
       - name: debug 2
-        run: ls -lah /var/run
+        run: ls -lah /var/run/docker.sock
       - name: Self-hosted Renovate
         uses: renovatebot/github-action@v25.25.2
         with:
