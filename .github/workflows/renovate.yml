@@ -23,6 +23,10 @@ jobs:
         run: npm ci --ignore-scripts
       - name: Build
         run: npm run build
+      - name: debug
+        run: cat /etc/group
+      - name: debug 2
+        run: ls -lah /var/run
       - name: Self-hosted Renovate
         uses: renovatebot/github-action@v25.25.2
         with:
