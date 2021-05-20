@@ -35,7 +35,8 @@ jobs:
       - name: Renovate
         uses: docker://renovate/renovate:25
         with:
-          entrypoint: /bin/ls -al /var/run/docker.sock
+          entrypoint: /bin/ls
+          args: -lah /var/run/docker.sock
 
         env:
           LOG_LEVEL: debug
