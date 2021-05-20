@@ -23,10 +23,15 @@ jobs:
         run: npm ci --ignore-scripts
       - name: Build
         run: npm run build
-      - name: Renovate
-        uses: docker://renovate/renovate:25
-        env:
-          LOG_LEVEL: debug
-          RENOVATE_CONFIG_FILE: dist/src/renovate-config.js
-          RENOVATE_TOKEN: ${{ secrets.RENOVATE_TOKEN }}
-          RENOVATE_CONFIG: '{"token": "${{secrets.RENOVATE_TOKEN}}", "extends": ["github>hisabimbola/renovate-base"]}'
+      - name: Self-hosted Renovate
+        uses: renovatebot/github-action@v21.30.0
+        with:
+          configurationFile: dist/src/renovate-config.js
+          token: ${{ secrets.RENOVATE_TOKEN }}
+#       - name: Renovate
+#         uses: docker://renovate/renovate:25
+#         env:
+#           LOG_LEVEL: debug
+#           RENOVATE_CONFIG_FILE: dist/src/renovate-config.js
+#           RENOVATE_TOKEN: ${{ secrets.RENOVATE_TOKEN }}
+#           RENOVATE_CONFIG: '{"token": "${{secrets.RENOVATE_TOKEN}}", "extends": ["github>hisabimbola/renovate-base"]}'
